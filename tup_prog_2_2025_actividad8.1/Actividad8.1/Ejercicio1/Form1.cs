@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace Ejercicio1
             int dni = Convert.ToInt32(tbDNI.Text);
             double importe = Convert.ToDouble(tbImporte.Text);
 
-            Cuenta cuenta = new Cuenta(nombre,dni,importe);
+            Cuenta cuenta = new Cuenta(nombre, dni, importe);
 
 
             cuentas.Sort();
@@ -42,6 +43,26 @@ namespace Ejercicio1
                 cuentas.Add(cuenta);
             }
             btnActualizar.PerformClick();
+        }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string path = openFileDialog1.FileName;
+                FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+                StreamReader sr = new StreamReader(fs);
+                while (sr.EndOfStream == false)
+                {
+                    string linea = sr.ReadLine();
+                    string dni = linea.Substring(0, 9);
+                    string nombre = linea.Substring(9,10).Trim();
+                    string importe = linea.Substring(19,9);
+                    Cuenta c = new Cuenta(nombre, Convert.ToInt32(dni), Convert.ToDouble(importe));
+
+                     
+                 }
+            }
         }
     }
 }

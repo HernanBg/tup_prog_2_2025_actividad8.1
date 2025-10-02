@@ -37,6 +37,9 @@
             this.tbDNI = new System.Windows.Forms.TextBox();
             this.tbImporte = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnImportar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -68,7 +71,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(404, 331);
+            this.btnActualizar.Location = new System.Drawing.Point(404, 419);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 42);
             this.btnActualizar.TabIndex = 4;
@@ -114,11 +117,26 @@
             this.listBox1.Size = new System.Drawing.Size(328, 225);
             this.listBox1.TabIndex = 9;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.Location = new System.Drawing.Point(404, 271);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(75, 40);
+            this.btnImportar.TabIndex = 10;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 484);
+            this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.tbImporte);
             this.Controls.Add(this.tbDNI);
@@ -146,6 +164,9 @@
         private System.Windows.Forms.TextBox tbDNI;
         private System.Windows.Forms.TextBox tbImporte;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button btnImportar;
     }
 }
 
