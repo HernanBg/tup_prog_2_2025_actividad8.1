@@ -33,9 +33,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.tbDNI = new System.Windows.Forms.TextBox();
+            this.tbImporte = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -83,27 +83,28 @@
             this.btnConfirmar.TabIndex = 5;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // textBox1
+            // tbNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.tbNombre.Location = new System.Drawing.Point(100, 33);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(100, 20);
+            this.tbNombre.TabIndex = 6;
             // 
-            // textBox2
+            // tbDNI
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.tbDNI.Location = new System.Drawing.Point(100, 73);
+            this.tbDNI.Name = "tbDNI";
+            this.tbDNI.Size = new System.Drawing.Size(100, 20);
+            this.tbDNI.TabIndex = 7;
             // 
-            // textBox3
+            // tbImporte
             // 
-            this.textBox3.Location = new System.Drawing.Point(100, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.tbImporte.Location = new System.Drawing.Point(100, 109);
+            this.tbImporte.Name = "tbImporte";
+            this.tbImporte.Size = new System.Drawing.Size(100, 20);
+            this.tbImporte.TabIndex = 8;
             // 
             // listBox1
             // 
@@ -119,9 +120,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 484);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbImporte);
+            this.Controls.Add(this.tbDNI);
+            this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.label4);
@@ -141,9 +142,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.TextBox tbDNI;
+        private System.Windows.Forms.TextBox tbImporte;
         private System.Windows.Forms.ListBox listBox1;
     }
 }
